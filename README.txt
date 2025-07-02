@@ -1,94 +1,77 @@
+# 🧠 Ibery CLI Compiler
 
-Ibery Programming Language
-============================
+**Ibery** is a lightweight, beginner-friendly scripting language that supports text output, arithmetic, variables, conditionals, and user input — all powered by a simple C-based compiler.
 
-A smart, simple, and AI-assisted programming language made by Bilta.
+> ⚠️ Currently under development. This is a preview release for testing purposes only.
 
-----------------------------------------
-What is Ibery?
-----------------------------------------
-Ibery is an experimental and lightweight programming language designed for simplicity, readability, and smart features.
-It supports basic arithmetic, user input, conditional logic, and even built-in AI prompts — all in a syntax anyone can understand.
+---
 
-NOTE: This version is for testing and educational purposes only.
+## 🔧 Features
 
-----------------------------------------
-Features
-----------------------------------------
-- txt{}        → prints messages or variables
-- inp{}        → asks user input
-- Variables    → x = 10
-- Arithmetic   → sum = a + b, total = x * y
-- Conditionals → if{a == b} ... endif
-- AI support   → ai{"Suggest something creative"}
-- CLI execution: berry --run filename.berry
+- Simple syntax: `txt{}`, `inp{}`, `if{}`, variables, math
+- Easy input/output for quick scripts
+- Works on both **Windows** and **Linux**
+- Compiled from C, runs with no dependencies
 
-----------------------------------------
-Installation (macOS Only)
-----------------------------------------
-Option 1: (Coming soon)
-    brew install --cask ibery.pkg
+---
 
-Option 2: Manual Install
-    1. Download ibery.pkg
-    2. Double-click to install
-    3. Done! Run:
-        berry --run yourcode.berry
+## 📦 Files
 
-----------------------------------------
-Project Structure (Development)
-----------------------------------------
-ibery/
-├── bin/                → Compiled berry binary
-├── source/             → compiler.c source code
-├── Scripts/            → postinstall script
-├── Resources/          → welcome.txt and other files
-├── test.berry          → Example Ibery program
-└── ibery.pkg           → Installer package
+| File          | OS       | Description                     |
+|---------------|----------|---------------------------------|
+| `berry.exe`   | Windows  | Ibery compiler binary (Windows) |
+| `berry`       | Linux    | Ibery compiler binary (Linux)   |
+| `hello.berry` | All      | Sample Ibery program            |
+| `compiler.c`  | Optional | Source code for developers      |
 
-----------------------------------------
-Sample Code (test.berry)
-----------------------------------------
+---
+
+## 🚀 How to Use
+
+### ▶ On Linux
+
+```bash
+./berry --run hello.berry
+```
+
+### ▶ On Windows
+
+```cmd
+berry.exe --run hello.berry
+```
+
+---
+
+## 🧪 Sample Ibery Program (`hello.berry`)
+
+```ibery
 txt{Welcome to Ibery!}
-inp{name}
-txt{Hello}
-txt{name}
+inp{a}
+inp{b}
+sum = a + b
+txt{sum}
+```
 
-----------------------------------------
-How to Use
-----------------------------------------
-1. Create a .berry file:
-    touch hello.berry
+---
 
-2. Add Ibery code to it.
+## 📁 Build from Source (Optional)
 
-3. Run it:
-    berry --run hello.berry
+### Linux
 
-----------------------------------------
-Documentation
-----------------------------------------
-Coming soon at https://ibery.org
-Dark themed, high contrast, interactive tutorials (like W3Schools).
+```bash
+gcc compiler.c -o berry
+```
 
-----------------------------------------
-Note
-----------------------------------------
-- Ibery is in alpha.
-- For testing and learning only.
-- Made by Bilta.
+### Windows (MinGW)
 
-----------------------------------------
-Future Plans
-----------------------------------------
-- Full AI integration
-- GUI-based editor
-- Cross-platform builds
-- Online playground
-- Package manager
+```bash
+gcc compiler.c -o berry.exe
+```
 
-----------------------------------------
-License
-----------------------------------------
-MIT License
-(c) 2025 Bilta
+---
+
+## 🏢 About
+
+> Made by **Bilta** — A tools lab for future programming.
+
+This project is free to use and experiment with. Feedback welcome!
